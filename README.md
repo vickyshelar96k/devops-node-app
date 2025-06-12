@@ -6,6 +6,7 @@ This project demonstrates an end-to-end DevOps CI/CD pipeline using:
 - Docker (for containerization)
 - SonarQube (for code quality analysis)
 - Trivy (for vulnerability scanning)
+- AWS EC2 (for cloud-based deployment and hosting)
 
 A simple Node.js web app is automatically built, scanned, and deployed through this pipeline.
 
@@ -15,6 +16,7 @@ A simple Node.js web app is automatically built, scanned, and deployed through t
 - Jenkins – CI/CD orchestration
 - SonarQube – Static code analysis
 - Trivy – Container vulnerability scanning
+- AWS EC2 – Hosted Jenkins server and app
 - Node.js + Express – Sample backend app
 
 ## ⚙️ CI/CD Workflow
@@ -23,6 +25,7 @@ A simple Node.js web app is automatically built, scanned, and deployed through t
 3. Docker container is run on port 3000
 4. SonarScanner analyzes code via SonarQube
 5. Trivy scans Docker image for security issues
+6. The complete setup is hosted and tested on AWS EC2 instance
 
 ## 📂 Project Structure
 
@@ -58,10 +61,17 @@ sonar-scanner -Dsonar.projectKey=devops-node-app \
   -Dsonar.login=<your_token>
 ```
 
+## ☁️ Cloud Hosting (AWS)
+
+This project was deployed and tested on an AWS EC2 instance:
+- Jenkins was hosted and accessed via public IP
+- Dockerized Node.js app ran inside container
+- SonarQube and Trivy were used on the same instance for full pipeline simulation
+
 ## 📸 Screenshots
 - Jenkins Console Output
 - SonarQube Dashboard
-- Trivy Report
+- Trivy Report Output Table
 
 ## 🧠 Author
 **Vikas Balaji Shelar**  
